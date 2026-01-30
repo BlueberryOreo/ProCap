@@ -2,6 +2,9 @@
 
 <div align="center">
 
+![ProCap Framework](assets/framework.png)
+*Figure 1: The proposed two-stage ProCap framework. (Left) Explicit Procedure Modeling stage. (Right) Implicit Procedure Captioning stage.*
+
 [![ICLR 2026](https://img.shields.io/badge/ICLR-2026-blue.svg)](https://iclr.cc/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
@@ -21,13 +24,10 @@ This repository contains the official implementation of the paper **"Imagine How
 Change captioning generates descriptions that explicitly describe the differences between two visually similar images. Existing methods operate on static image pairs, thus ignoring the rich temporal dynamics of the change procedure.
 
 We introduce **ProCap**, a novel framework that reformulates change modeling from static image comparison to dynamic procedure modeling. 
-1.  [cite_start]**Explicit Procedure Modeling:** Trains a procedure encoder to learn the change procedure from a sparse set of keyframes obtained by interpolating and sampling intermediate frames[cite: 20, 21].
-2.  [cite_start]**Implicit Procedure Captioning:** Integrates the encoder within an encoder-decoder model, using learnable procedure queries to prompt the encoder for inferring the latent procedure representation[cite: 24, 25].
+1.  **Explicit Procedure Modeling:** Trains a procedure encoder to learn the change procedure from a sparse set of keyframes obtained by interpolating and sampling intermediate frames.
+2.  **Implicit Procedure Captioning:** Integrates the encoder within an encoder-decoder model, using learnable procedure queries to prompt the encoder for inferring the latent procedure representation.
 
-[cite_start]Experiments on CLEVR-Change, Spot-the-Diff, and Image-Editing-Request demonstrate the effectiveness of ProCap[cite: 27].
-
-![ProCap Framework](assets/framework.png)
-*Figure 1: The proposed two-stage ProCap framework. (Left) Explicit Procedure Modeling stage. (Right) Implicit Procedure Captioning stage.*
+Experiments on CLEVR-Change, Spot-the-Diff, and Image-Editing-Request demonstrate the effectiveness of ProCap.
 
 ## 🚀 TODO List
 - [x] Release the paper.
