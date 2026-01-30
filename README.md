@@ -39,7 +39,7 @@ If you find our work or this repository useful, please consider citing our paper
 
 ```bibtex
 @inproceedings{
-anonymous2026imagine,
+  sun2026imagine,
   title={Imagine How To Change: Explicit Procedure Modeling for Change Captioning},
   author={Sun, Jiayang and Guo, Zixin and Cao, Min and Zhu, Guibo and Laaksonen, Jorma},
   booktitle={The Fourteenth International Conference on Learning Representations},
