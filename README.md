@@ -145,4 +145,4 @@ If you find our work or this repository useful, please consider citing our paper
 
 ## Acknowledgement
 
-Our codebase is built upon [MMVID](https://github.com/snap-research/MMVID) and [taming-transformers](https://github.com/CompVis/taming-transformers). We would like to thank the authors for their excellent open-source contributions.
+Our codebase is built upon [MMVID](https://github.com/snap-research/MMVID), [taming-transformers](https://github.com/CompVis/taming-transformers) and [CLIP4IDC](https://github.com/sushizixin/CLIP4IDC). We would like to thank the authors for their excellent open-source contributions.
