@@ -19,7 +19,8 @@
 
 ## 📢 News
 * **[2026-01-26]** The paper is accepted by **ICLR 2026**! 🎉
-* **[Coming Soon]** We are currently organizing the code and checkpoints. They will be released shortly. Please star ⭐ this repo to get notifications!
+* **[2026-02-02]** 🚀 Code Release: We have released the full training and inference code for ProCap!
+* **[Coming Soon]** 📦 Model Zoo: We are currently uploading the pre-trained checkpoints and processed datasets to Hugging Face and NetDisk. Stay tuned and star ⭐ our repo for updates!
 
 ## 🏠 Abstract
 This repository contains the official implementation of the paper **"Imagine How to Change: Explicit Procedure Modeling for Change Captioning"**.
