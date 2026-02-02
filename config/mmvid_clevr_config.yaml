@@ -1,0 +1,84 @@
+
+# MMVID Config
+dalle_param:
+  vae:
+    which_vae: vqgan1024
+    vae_path: ./pretrained_vqgan/clevr_epoch=000035.ckpt
+    image_size: 224
+  bert:
+    num_text_tokens: 0
+    text_seq_len: 24 # equal to max_t_len
+    dim: 768
+    loss_img_weight: 7
+    text_feature_dim: 0
+    fixed_language_model: null
+    text_emb_bottleneck: null
+    which_transformer: openai_clip_visual
+    num_targets: 4 # equal to max_v_len
+    num_visuals: 0
+    use_separate_visual_emb: False
+    beit: True
+    insert_sep: False
+    openai_clip_path: ./ViT-B-32.pt
+    vision_layers: 12
+  skip_params: [to_logits_vid.1.bias, to_logits_vid.1.weight, to_logits_vid.0.bias, to_logits_vid.0.weight, to_logits_rel.1.bias, to_logits_rel.1.weight, to_logits_rel.0.bias, to_logits_rel.0.weight, to_logits.1.bias, to_logits.1.weight, to_logits.0.bias, to_logits.0.weight, to_logits_text.1.bias, to_logits_text.1.weight, to_logits_text.0.bias, to_logits_text.0.weight, image_emb.weight]
+  freeze: false
+  use_lora: false
+  lora_config:
+    r: 8
+    lora_alpha: 16
+    lora_dropout: 0.1
+    bias: "none"
+
+
+# text decoder config
+decoder_param:
+  max_n_sen: 12
+  max_t_len: 24
+  max_v_len: 4
+  exp_id: init
+  hidden_size: 512
+  intermediate_size: 2048
+  num_hidden_layers: 2
+  num_attention_heads: 8
+  mask_prob: 0.0
+  hidden_dropout_prob: 0.1
+  label_smoothing: 0.1
+  recurrent: false
+  untied: false
+  mtrans: true
+  use_beam: false
+
+
+# dataset config
+dset_name: clevr
+data_dir: ./densevid_eval/clevr_data
+video_feature_dir: ./data/clevr/CLEVR_processed
+word2idx_path: ./cache/clevr_word2idx.json
+glove_path: ./cache/yc2_vocab_glove.pt
+eval_tool_dir: ./densevid_eval
+filtered: true
+filter_file_path: "./filter_files/clevr_similarity_scores.json"
+max_k: 2
+num_frames: 9
+recurrent: false
+untied: false
+mtrans: true
+use_beam: false
+image_size: 224 # equal to vae.image_size
+
+
+# training config
+n_epoch: 40
+batch_size: 16
+val_batch_size: 32
+max_es_cnt: 50
+seed: 52
+lr: 5e-5
+lr_finetune: 5e-5
+lr_warmup_proportion: 0.1
+grad_clip: 1
+weight_decay: 0.01
+ema_decay: -1
+num_workers: 8
+temperature: 0.5

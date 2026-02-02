@@ -1,0 +1,3 @@
+# ninja log v5
+1	20744	1736495976815387437	/data/sjy/VFI4IDC_test/IDC_scratch_model/transformer/src/ttransformer/rpe_ops/build/temp.linux-x86_64-cpython-39/rpe_index.o	8a140c648c605bb6
+1	62891	1736496018955903439	/data/sjy/VFI4IDC_test/IDC_scratch_model/transformer/src/ttransformer/rpe_ops/build/temp.linux-x86_64-cpython-39/rpe_index_cuda.o	2a4fc2d90953e6d3

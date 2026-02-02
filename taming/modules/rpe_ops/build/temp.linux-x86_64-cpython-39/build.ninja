@@ -1,0 +1,33 @@
+ninja_required_version = 1.3
+cxx = c++
+nvcc = /usr/local/cuda/bin/nvcc
+
+cflags = -pthread -B /data/sjy/anaconda3/envs/dinov2/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /data/sjy/anaconda3/envs/dinov2/include -I/data/sjy/anaconda3/envs/dinov2/include -fPIC -O2 -isystem /data/sjy/anaconda3/envs/dinov2/include -fPIC -DWITH_CUDA -I/data/sjy/anaconda3/envs/dinov2/lib/python3.9/site-packages/torch/include -I/data/sjy/anaconda3/envs/dinov2/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -I/data/sjy/anaconda3/envs/dinov2/lib/python3.9/site-packages/torch/include/TH -I/data/sjy/anaconda3/envs/dinov2/lib/python3.9/site-packages/torch/include/THC -I/usr/local/cuda/include -I/data/sjy/anaconda3/envs/dinov2/include/python3.9 -c
+post_cflags = -fopenmp -O3 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=rpe_index_cpp -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+cuda_cflags = -DWITH_CUDA -I/data/sjy/anaconda3/envs/dinov2/lib/python3.9/site-packages/torch/include -I/data/sjy/anaconda3/envs/dinov2/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -I/data/sjy/anaconda3/envs/dinov2/lib/python3.9/site-packages/torch/include/TH -I/data/sjy/anaconda3/envs/dinov2/lib/python3.9/site-packages/torch/include/THC -I/usr/local/cuda/include -I/data/sjy/anaconda3/envs/dinov2/include/python3.9 -c
+cuda_post_cflags = -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -O3 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=rpe_index_cpp -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_86,code=compute_86 -gencode=arch=compute_86,code=sm_86 -std=c++17
+cuda_dlink_post_cflags = 
+ldflags = 
+
+rule compile
+  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags
+  depfile = $out.d
+  deps = gcc
+
+rule cuda_compile
+  depfile = $out.d
+  deps = gcc
+  command = $nvcc --generate-dependencies-with-compile --dependency-output $out.d $cuda_cflags -c $in -o $out $cuda_post_cflags
+
+
+
+
+
+build /data/sjy/VFI4IDC_test/IDC_scratch_model/transformer/src/ttransformer/rpe_ops/build/temp.linux-x86_64-cpython-39/rpe_index.o: compile /data/sjy/VFI4IDC_test/IDC_scratch_model/transformer/src/ttransformer/rpe_ops/rpe_index.cpp
+build /data/sjy/VFI4IDC_test/IDC_scratch_model/transformer/src/ttransformer/rpe_ops/build/temp.linux-x86_64-cpython-39/rpe_index_cuda.o: cuda_compile /data/sjy/VFI4IDC_test/IDC_scratch_model/transformer/src/ttransformer/rpe_ops/rpe_index_cuda.cu
+
+
+
+
+
+

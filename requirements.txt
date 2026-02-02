@@ -1,0 +1,55 @@
+# --- Core Frameworks ---
+torch==2.5.1
+torchvision==0.20.1
+torchaudio==2.5.1
+pytorch-lightning==2.5.0.post0
+accelerate==1.5.2
+deepspeed==0.18.5
+
+# --- Model Architectures & Weights ---
+transformers==4.53.2
+timm==1.0.22
+einops==0.8.0
+peft==0.15.0
+safetensors==0.4.5
+omegaconf==2.3.0
+yacs==0.1.8
+
+# --- Specialized Components ---
+xformers==0.0.28.post3
+ninja==1.11.1.1
+triton==3.1.0
+
+# --- Vision & Video Processing ---
+opencv-python==4.8.0.74
+pillow==11.3.0
+decord==0.6.0
+av==13.1.0
+imageio==2.36.0
+imageio-ffmpeg==0.6.0
+moviepy==2.1.2
+scikit-image==0.24.0
+
+# --- NLP & Evaluation ---
+nltk==3.9.1
+spacy==3.8.2
+tokenizers==0.21.1
+sentencepiece==0.2.0
+pycocotools==2.0.7
+pycocoevalcap==1.2
+FactualSceneGraph==0.5.0
+
+# --- Data & Storage ---
+datasets==2.14.5
+h5py==3.12.1
+pyarrow==16.1.0
+pandas==2.2.2
+numpy==1.23.5
+
+# --- Utilities ---
+tqdm==4.66.5
+scipy==1.13.1
+scikit-learn==1.5.2
+easydict==1.13
+ftfy==6.3.0
+regex==2024.9.11

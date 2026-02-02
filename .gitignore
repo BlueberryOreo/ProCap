@@ -1,0 +1,11 @@
+
+logs/
+filter_files
+ckpt
+pretrained_vqgan
+densevid_eval
+__pycache__/
+
+*.ckpt
+*.pt
+*.pth

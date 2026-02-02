@@ -1,0 +1,15 @@
+
+video_feature_size: 768
+embed_dim: 768
+# depth: 6
+num_heads: 12
+mlp_ratio: 4.
+qkv_bias: False
+qk_scale: null
+drop_rate: 0.
+attn_drop_rate: 0.
+drop_path_rate: 0.1
+norm_layer: nn.LayerNorm
+num_frames: 4
+attention_type: 'divided_space_time'
+dropout: 0.
