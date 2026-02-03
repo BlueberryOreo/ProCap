@@ -20,7 +20,7 @@
 ## 📢 News
 * **[2026-01-26]** The paper is accepted by **ICLR 2026**! 🎉
 * **[2026-02-02]** 🚀 Code Release: We have released the full training and inference code for ProCap!
-* **[Coming Soon]** 📦 Model Zoo: We are currently uploading the pre-trained checkpoints and processed datasets to Hugging Face and NetDisk. Stay tuned and star ⭐ our repo for updates!
+* **[2026-02-03]** 📦 Model Zoo: We have released the pre-trained checkpoints and processed datasets to Hugging Face and NetDisk. 
 
 ## 🏠 Abstract
 This repository contains the official implementation of the paper **"Imagine How to Change: Explicit Procedure Modeling for Change Captioning"**.
@@ -36,14 +36,14 @@ Experiments on CLEVR-Change, Spot-the-Diff, and Image-Editing-Request demonstrat
 ## 🚀 TODO List
 - [x] Release the paper.
 - [x] Release the training and inference code.
-- [ ] Release the pre-trained checkpoints (ProCap best models) and the processed datasets (CLEVR-Change, Spot-the-Diff, Image-Editing-Request).
+- [x] Release the pre-trained checkpoints (ProCap best models) and the processed datasets (CLEVR-Change, Spot-the-Diff, Image-Editing-Request).
 
 ## 🛠️ Installation
 
 ### Resource Access
 
 All experimental materials, including **processed datasets** and **pre-trained weights**, are available for download at:
-* [**Hugging Face**](https://huggingface.co/BlueberryOreo/ProCap) *(uploading)*
+* [**Hugging Face**](https://huggingface.co/BlueberryOreo/ProCap)
 * [**Netdisk (Baidu):** ](https://pan.baidu.com/s/1t_YXB6J_vkuPxByn2hat2A)Extraction Code: 5h7w
 
 Download OpenAI's pretrained CLIP model and place it under `./`
