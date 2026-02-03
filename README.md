@@ -101,7 +101,7 @@ The corresponding checkpoints can be found on Hugging Face and Netdisk.
 
 ### Stage 2: Implicit Procedure Captioning
 
-We train our Implicit Procedure Captioning model on 2 NVIDIA RTX 3090 GPUs. Configs can be found in `configs/`. The results will be saved to `logs/`.
+Configs can be found in `configs/`. The results will be saved to `logs/`.
 
 ```bash
 # CLEVR
