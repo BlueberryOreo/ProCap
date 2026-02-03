@@ -84,7 +84,7 @@ Please refer to [data](./data/README.md) for detailed instructions on dataset pr
 
 The training weights will be saved to `logs/`.
 
-Note: Please download the pretrained VQGAN models, rename the directory to `pretrained_vqgan`, and place it in the project root directory. Please download `filter_files` (filtered by pretrained [CLIP4IDC](https://github.com/sushizixin/CLIP4IDC)), rename the directory to `filter_files`, and place it in the project root directory. 
+Note: Please download the pretrained VQGAN models, rename the directory to `pretrained_vqgan`, and place it in the project root directory. Please download confidence scores (computed by pretrained [CLIP4IDC](https://github.com/sushizixin/CLIP4IDC)), rename the directory to `filter_files`, and place it in the project root directory. 
 
 ```bash
 # CLEVR
